@@ -41,7 +41,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="?android:selectableItemBackgroundBorderless"
-            android:contentDescription="Play"
+            android:contentDescription="Reproduzir"
             android:padding="8dp"
             android:src="@drawable/ri_play_circle_line" />
 
@@ -50,7 +50,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="?android:selectableItemBackgroundBorderless"
-            android:contentDescription="Edit"
+            android:contentDescription="Editar"
             android:padding="8dp"
             android:src="@drawable/ri_edit_line" />
 
@@ -59,7 +59,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="?android:selectableItemBackgroundBorderless"
-            android:contentDescription="Delete"
+            android:contentDescription="Excluir"
             android:padding="8dp"
             android:src="@drawable/ri_delete_bin_line" />
     </LinearLayout>
