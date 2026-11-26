@@ -44,7 +44,7 @@
                 android:textColor="@color/shorts_caption_text"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                tools:text="caption" />
+                tools:text="legenda" />
 
             <TextView
                 android:id="@+id/shortsTranslationTV"
@@ -62,7 +62,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:visibility="gone"
-                tools:text="translation" />
+                tools:text="tradução" />
         </FrameLayout>
 
         <ImageButton
@@ -72,7 +72,7 @@
             android:layout_gravity="bottom|center_horizontal"
             android:layout_marginBottom="8dp"
             android:background="@drawable/shorts_player_toggle_background"
-            android:contentDescription="Shrink video for subtitle editing"
+            android:contentDescription="Reduzir vídeo para edição de legendas"
             android:padding="8dp"
             android:scaleType="center"
             android:src="@drawable/ri_arrow_up_s_line"
@@ -109,17 +109,17 @@
             android:layout_weight="1"
             android:textColor="#856404"
             android:textSize="12sp"
-            android:text="Video source is inaccessible. Playing audio fallback." />
+            android:text="A fonte de vídeo está inacessível. Reproduzindo áudio alternativo." />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/reselectVideoBT"
             style="@style/Widget.Material3.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
-            android:contentDescription="Re-select video"
+            android:contentDescription="Selecionar vídeo novamente"
             android:textColor="#856404"
             android:textSize="11sp"
-            android:text="Pick"
+            android:text="Escolher"
             app:icon="@drawable/ri_file_video_line"
             app:iconGravity="textStart"
             app:iconPadding="4dp"
@@ -169,8 +169,8 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
-            android:contentDescription="Cancel"
-            android:text="Stop"
+            android:contentDescription="Cancelar"
+            android:text="Parar"
             android:visibility="gone"
             app:icon="@drawable/ri_close_line"
             app:iconGravity="textStart"
@@ -216,8 +216,8 @@
             android:layout_height="52dp"
             android:layout_marginEnd="6dp"
             android:layout_weight="1"
-            android:contentDescription="Adjust subtitle position"
-            android:text="Move"
+            android:contentDescription="Ajustar posição da legenda"
+            android:text="Mover"
             android:visibility="gone"
             app:icon="@drawable/ri_settings_3_line"
             app:iconGravity="textStart"
@@ -230,8 +230,8 @@
             android:layout_height="52dp"
             android:layout_marginStart="6dp"
             android:layout_weight="1"
-            android:contentDescription="Export subtitles or video"
-            android:text="Export"
+            android:contentDescription="Exportar legendas ou vídeo"
+            android:text="Exportar"
             android:visibility="gone"
             app:icon="@drawable/ri_export_line"
             app:iconGravity="textStart"
