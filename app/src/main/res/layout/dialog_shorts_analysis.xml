@@ -25,7 +25,7 @@
             style="@style/TextAppearance.Material3.TitleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clips to find"
+            android:text="Clipes para encontrar"
             android:textColor="?attr/colorPrimary" />
 
         <TextView
@@ -34,15 +34,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="12dp"
-            android:text="Choose how many suggestions Gemma should return and how long each clip may be."
+            android:text="Escolha quantas sugestões a Gemma deve retornar e quanto tempo cada clipe pode ter."
             android:textColor="?android:attr/textColorSecondary" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Number of clips"
+            android:hint="Número de clipes"
             app:boxBackgroundMode="outline"
-            app:helperText="1–10 clip suggestions">
+            app:helperText="1 a 10 sugestões de clipes">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/clipCountInput"
@@ -64,9 +64,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="6dp"
                 android:layout_weight="1"
-                android:hint="Shortest clip"
+                android:hint="Clipe mais curto"
                 app:boxBackgroundMode="outline"
-                app:helperText="Seconds">
+                app:helperText="Segundos">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/minDurationInput"
@@ -82,9 +82,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
-                android:hint="Longest clip"
+                android:hint="Clipe mais longo"
                 app:boxBackgroundMode="outline"
-                app:helperText="Seconds, up to 180">
+                app:helperText="Segundos, até 180">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/maxDurationInput"
@@ -101,16 +101,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="What Gemma should look for"
+            android:text="O que a Gemma deve procurar"
             android:textColor="?attr/colorPrimary" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Creative direction (optional)"
+            android:hint="Direção criativa (opcional)"
             app:boxBackgroundMode="outline"
-            app:helperText="Example: Prioritize practical tutorials with a strong opening hook">
+            app:helperText="Exemplo: Priorizar tutoriais práticos com uma abertura forte">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/focusInput"
@@ -127,7 +127,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="AI processing"
+            android:text="Processamento de IA"
             android:textColor="?attr/colorPrimary" />
 
         <com.google.android.material.materialswitch.MaterialSwitch
@@ -136,7 +136,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:checked="false"
-            android:text="Enable thinking" />
+            android:text="Ativar raciocínio" />
 
         <TextView
             style="@style/TextAppearance.Material3.BodySmall"
@@ -144,7 +144,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="16dp"
             android:paddingEnd="8dp"
-            android:text="May improve clip selection by letting Gemma reason before answering, but analysis takes longer. Off by default."
+            android:text="Pode melhorar a seleção de clipes permitindo que a Gemma raciocine antes de responder, mas a análise demora mais. Desativado por padrão."
             android:textColor="?android:attr/textColorSecondary" />
 
         <com.google.android.material.materialswitch.MaterialSwitch
@@ -152,7 +152,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Use CPU instead of GPU" />
+            android:text="Usar CPU em vez de GPU" />
 
         <TextView
             style="@style/TextAppearance.Material3.BodySmall"
@@ -160,7 +160,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="16dp"
             android:paddingEnd="8dp"
-            android:text="Keeps the interface more responsive and uses less battery, but analysis is usually slower. On some devices CPU can be faster."
+            android:text="Mantém a interface mais responsiva e usa menos bateria, mas a análise geralmente é mais lenta. Em alguns dispositivos, a CPU pode ser mais rápida."
             android:textColor="?android:attr/textColorSecondary" />
 
         <TextView
@@ -168,7 +168,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Caption timing"
+            android:text="Tempo das legendas"
             android:textColor="?attr/colorPrimary" />
 
         <com.google.android.material.materialswitch.MaterialSwitch
@@ -176,7 +176,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Show one spoken word at a time" />
+            android:text="Mostrar uma palavra falada por vez" />
 
         <TextView
             android:id="@+id/wordsPerSubtitleLabel"
@@ -184,7 +184,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Maximum words per subtitle: 10" />
+            android:text="Máximo de palavras por legenda: 10" />
 
         <com.google.android.material.slider.Slider
             android:id="@+id/wordsPerSubtitleSlider"
@@ -218,7 +218,7 @@
             style="@style/Widget.Material3.Button.TextButton.Dialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancel" />
+            android:text="Cancelar" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/startAnalysisButton"
@@ -226,6 +226,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Start analysis" />
+            android:text="Iniciar análise" />
     </LinearLayout>
 </LinearLayout>
