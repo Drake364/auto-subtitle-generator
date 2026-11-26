@@ -12,7 +12,7 @@
         android:id="@+id/modelSearchLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Search models">
+        android:hint="Pesquisar modelos">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/modelSearchInput"
@@ -43,35 +43,35 @@
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="All" />
+                android:text="Todos" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/filterInstalledChip"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Installed" />
+                android:text="Instalados" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/filterMobileChip"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mobile" />
+                android:text="Celular" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/filterAiChip"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="AI" />
+                android:text="IA" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/filterDownloadingChip"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Downloading" />
+                android:text="Baixando" />
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
 
@@ -97,7 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:alpha="0.8"
-            android:text="Loading speech model into memory... please wait"
+            android:text="Carregando modelo de voz na memória... aguarde"
             android:textSize="13sp"
             android:textStyle="italic" />
     </LinearLayout>
