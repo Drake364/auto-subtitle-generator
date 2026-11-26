@@ -3,20 +3,20 @@
     <item
         android:id="@+id/nav_generate"
         android:icon="@drawable/ri_video_add_line"
-        android:title="Generate" />
+        android:title="Gerar" />
 
     <item
         android:id="@+id/nav_models"
         android:icon="@drawable/ri_download_line"
-        android:title="Models" />
+        android:title="Modelos" />
 
     <item
         android:id="@+id/nav_exports"
         android:icon="@drawable/ri_folder_open_line"
-        android:title="Exports" />
+        android:title="Exportados" />
 
     <item
         android:id="@+id/nav_settings"
         android:icon="@drawable/ri_settings_3_line"
-        android:title="Settings" />
+        android:title="Configurações" />
 </menu>
