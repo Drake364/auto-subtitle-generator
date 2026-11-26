@@ -1,275 +1,247 @@
-# Auto Subtitle Generator
+# Gerador Automático de Legendas (Auto Subtitle Generator)
 
-Auto Subtitle Generator is an Android app for creating, editing, translating, and exporting subtitles directly on your device. Speech recognition runs locally with [whisper.cpp](https://github.com/ggerganov/whisper.cpp) (Whisper models) or [Vosk](https://github.com/alphacep/vosk-api), translation runs on-device with [ML Kit](https://developers.google.com/ml-kit/language/translation), and media work is handled by [FFmpeg Kit](https://github.com/arthenica/ffmpeg-kit/tree/main/android). No cloud service is required and your audio never leaves the device.
+O Gerador Automático de Legendas é um aplicativo Android para criar, editar, traduzir e exportar legendas diretamente no seu dispositivo. O reconhecimento de fala roda localmente com [whisper.cpp](https://github.com/ggerganov/whisper.cpp) (modelos Whisper) ou [Vosk](https://github.com/alphacep/vosk-api), a tradução roda no dispositivo com o [ML Kit](https://developers.google.com/ml-kit/language/translation), e o processamento de mídia é feito pelo [FFmpeg Kit](https://github.com/arthenica/ffmpeg-kit/tree/main/android). Nenhum serviço em nuvem é necessário e o seu áudio nunca sai do dispositivo.
 
-![Auto Subtitle Generator icon](https://github.com/user-attachments/assets/8d2f8631-a595-49ec-92ec-9b60a72e73cf)
+![Ícone do Gerador Automático de Legendas](https://github.com/user-attachments/assets/8d2f8631-a595-49ec-92ec-9b60a72e73cf)
 
-## Highlights
+## Destaques
 
-- Generate subtitles from videos completely offline.
-- Two recognition engines: Whisper (whisper.cpp) and Vosk.
-- Whisper word-level timestamps for accurate, tappable cue timing.
-- Multilingual transcription with automatic language detection.
-- On-device translation, including bilingual (original + translated) subtitles.
-- Optional Voice Activity Detection (VAD) to skip silence and speed up long videos.
-- Queue multiple videos and keep processing while the app is in the background.
-- Download, pause, resume, cancel, and manage speech models inside the app.
-- Bundled English Whisper model so the app works out of the box.
-- Preview subtitles with video playback before exporting.
-- Edit, merge, split, delete, and retime generated subtitles.
-- Export subtitle files as SRT or VTT.
-- Export videos with soft subtitles or hard burned-in subtitles.
-- Create short-form styled captions, including word-by-word caption timing.
-- Use local Gemma 4 E2B to find, review, crop, and export Shorts from long-video transcripts.
-- Batch export subtitle files or captioned videos.
-- Track completed exports in an export library.
+- Gere legendas a partir de vídeos totalmente offline.
+- Dois motores de reconhecimento: Whisper (whisper.cpp) e Vosk.
+- Carimbos de tempo em nível de palavra do Whisper para uma sincronização precisa e clicável.
+- Transcrição multilíngue com detecção automática de idioma.
+- Tradução no dispositivo, incluindo legendas bilíngues (original + tradução).
+- Detecção Opcional de Atividade de Voz (VAD) para pular silêncios e acelerar vídeos longos.
+- Enfileire vários vídeos e continue o processamento enquanto o app está em segundo plano.
+- Baixe, pause, retome, cancele e gerencie modelos de fala dentro do app.
+- Modelo Whisper em inglês já incluído para o app funcionar imediatamente.
+- Pré-visualize as legendas com a reprodução do vídeo antes de exportar.
+- Edite, mescle, divida, exclua e ajuste o tempo das legendas geradas.
+- Exporte arquivos de legenda como SRT ou VTT.
+- Exporte vídeos com legendas suaves (soft) ou legendas embutidas (hard burned-in).
+- Crie legendas estilizadas para formatos curtos, incluindo a sincronização palavra por palavra.
+- Use o modelo local Gemma 4 E2B para encontrar, revisar, cortar e exportar Shorts a partir de transcrições de vídeos longos.
+- Exportação em lote de arquivos de legenda ou vídeos com legendas.
+- Acompanhe as exportações concluídas em uma biblioteca de exportação.
 
-## Screenshots
+## Capturas de Tela
 
-| Generate | Preview | Models |
+| Gerar | Prévia | Modelos |
 | --- | --- | --- |
 | <img width="270" height="600" alt="Screenshot_20260602_001838" src="https://github.com/user-attachments/assets/1b0b5085-228b-4503-b573-de4e3254001d" /> | <img width="270" height="600" alt="Screenshot_20260602_002104" src="https://github.com/user-attachments/assets/fcaec73e-fd06-4018-9f1f-40e5ceaac0d5" /> | <img width="270" height="600" alt="Screenshot_20260602_002154" src="https://github.com/user-attachments/assets/587eb864-e00f-419e-84db-bf352fd14abe" /> |
 
-| Exports | Settings |
+| Exportações | Configurações |
 | --- | --- |
 | <img width="270" height="600" alt="Screenshot_20260602_002525" src="https://github.com/user-attachments/assets/3ba347db-fd3d-4073-9e75-fdbc7a75136e" /> | <img width="270" height="600" alt="Screenshot_20260602_002536" src="https://github.com/user-attachments/assets/6e5429ef-df4b-4024-b675-aec1d40b6040" /> |
 
-## Install APK
-You can find the latest releases with apk files here: https://github.com/Serkali-sudo/auto-subtitle-generator/releases
+## Instalar APK
+Você pode encontrar as versões mais recentes com os arquivos APK aqui: https://github.com/Serkali-sudo/auto-subtitle-generator/releases
 
-## Features
+## Funcionalidades
 
-### Local subtitle generation
+### Geração local de legendas
 
-Auto Subtitle Generator extracts audio from the selected video, runs speech recognition locally, and turns recognized speech into timed subtitle cues. Generated subtitles can be reviewed immediately in the preview screen.
+O Gerador Automático de Legendas extrai o áudio do vídeo selecionado, executa o reconhecimento de fala localmente e transforma a fala reconhecida em legendas sincronizadas. As legendas geradas podem ser revisadas imediatamente na tela de pré-visualização.
 
-Because recognition is local, the video audio is not sent to a server. Accuracy depends on the selected model, audio quality, language, accents, background noise, and device performance.
+Como o reconhecimento é local, o áudio do vídeo não é enviado para um servidor. A precisão depende do modelo selecionado, da qualidade do áudio, do idioma, dos sotaques, do ruído de fundo e do desempenho do dispositivo.
 
-### Recognition engines
+### Motores de reconhecimento
 
-The app supports two offline engines and lets you pick a model from a single catalog:
+O aplicativo suporta dois motores offline e permite escolher um modelo a partir de um único catálogo:
 
-- **Whisper (whisper.cpp):** the default engine. Provides word-level timestamps, strong multilingual accuracy, and automatic language detection. Models range from `tiny` and `base` up to `small`, `medium`, and `large-v3` / `large-v3-turbo`, each with English-only and multilingual variants and quantized (`q5`/`q8`) builds that trade size for accuracy. A quantized English Base model is bundled in the APK so generation works without any download.
-- **Vosk:** lightweight Kaldi-based models covering a wide range of languages, useful on lower-end devices or for languages where a small dedicated model is preferred.
+- **Whisper (whisper.cpp):** o motor padrão. Fornece timestamps em nível de palavra, forte precisão multilíngue e detecção automática de idioma. Os modelos variam de `tiny` e `base` até `small`, `medium` e `large-v3` / `large-v3-turbo`, cada um com variantes apenas em inglês e multilíngues, além de versões quantizadas (`q5`/`q8`) que trocam tamanho por precisão. Um modelo Base em inglês quantizado já vem incluído no APK para que a geração funcione sem nenhum download.
+- **Vosk:** modelos leves baseados em Kaldi que cobrem uma ampla variedade de idiomas, úteis em dispositivos mais simples ou para idiomas onde um pequeno modelo dedicado é preferível.
 
-### Language and translation
+### Idioma e tradução
 
-- **Language selection:** choose a specific transcription language or let Whisper auto-detect it. Multilingual Whisper models can transcribe non-English audio directly.
-- **On-device translation:** translate generated subtitles with ML Kit. Translation language packs download on demand and run locally.
-- **Subtitle layers:** export the original transcription, the translation only, or **double (bilingual)** subtitles that stack the original and translated text together.
+- **Seleção de idioma:** escolha um idioma específico para transcrição ou deixe o Whisper detectá-lo automaticamente. Modelos Whisper multilíngues podem transcrever áudios que não sejam em inglês diretamente.
+- **Tradução no dispositivo:** traduza as legendas geradas com o ML Kit. Os pacotes de idiomas para tradução são baixados sob demanda e rodam localmente.
+- **Camadas de legenda:** exporte a transcrição original, apenas a tradução, ou legendas **duplas (bilíngues)** que empilham o texto original e o traduzido juntos.
 
-### Voice Activity Detection (silence skipping)
+### Detecção de Atividade de Voz (pular silêncio)
 
-For long videos, VAD can detect speech regions and skip silent stretches so transcription runs faster. Two detectors are available:
+Para vídeos longos, o VAD pode detectar regiões de fala e pular trechos de silêncio para que a transcrição seja mais rápida. Dois detectores estão disponíveis:
 
-- **WebRTC VAD** (fast, lightweight)
-- **Silero VAD** (neural, more selective)
+- **WebRTC VAD** (rápido, leve)
+- **Silero VAD** (neural, mais seletivo)
 
-Each supports Normal / Aggressive / Very aggressive sensitivity. VAD is **off by default** because skipping audio can occasionally drop quiet speech or shift timings. When you add a long video, the app offers to enable silence-skipping for that video, with a clear speed-vs-accuracy tradeoff, while leaving shorter videos untouched.
+Cada um suporta sensibilidade Normal / Agressiva / Muito agressiva. O VAD vem **desativado por padrão**, pois pular áudio pode ocasionalmente perder falas baixas ou alterar os tempos. Quando você adiciona um vídeo longo, o aplicativo oferece ativar o salto de silêncio para aquele vídeo, com uma clara compensação entre velocidade e precisão, deixando os vídeos mais curtos intocados.
 
-### Queue processing
+### Processamento de fila
 
-You can add multiple videos to the subtitle queue and process them one by one. Queue state is persisted, so pending and completed items remain visible across app restarts. Each queued video also remembers its own settings, such as whether silence-skipping was enabled for it.
+Você pode adicionar vários vídeos à fila de legendas e processá-los um por um. O estado da fila é persistido, então os itens pendentes e concluídos permanecem visíveis mesmo após reiniciar o aplicativo. Cada vídeo na fila também lembra suas próprias configurações, como se o salto de silêncio foi ativado para ele.
 
-The queue supports:
+A fila suporta:
 
-- Single-video generation.
-- Multi-video queue generation.
-- Progress tracking for active work.
-- Canceling active media work.
-- Multi-select actions.
-- Select all for visible queue items.
-- Batch subtitle export.
-- Batch video export.
+- Geração de vídeo único.
+- Geração de fila com vários vídeos.
+- Acompanhamento do progresso do trabalho ativo.
+- Cancelamento de trabalho de mídia ativo.
+- Ações de seleção múltipla.
+- Selecionar tudo para os itens visíveis na fila.
+- Exportação em lote de legendas.
+- Exportação em lote de vídeos.
 
-### Foreground background work
+### Trabalho em segundo plano (Foreground)
 
-Long-running work is handled by a foreground service instead of being owned only by the activity or view model. This keeps user-started work alive when the app is backgrounded or the UI is recreated, and a wake lock keeps the device working through long jobs.
+Trabalhos de longa duração são gerenciados por um serviço em primeiro plano (foreground service) em vez de serem de responsabilidade apenas da tela ou do view model. Isso mantém o trabalho iniciado pelo usuário vivo quando o aplicativo vai para segundo plano ou a interface é recriada, e um wake lock mantém o dispositivo trabalhando durante tarefas longas.
 
-The service is used for:
+O serviço é usado para:
 
-- Subtitle generation.
-- Subtitle file saves.
-- Soft subtitle video exports.
-- Hard subtitle video exports.
-- Batch exports.
-- Model downloads.
+- Geração de legendas.
+- Salvamento de arquivos de legenda.
+- Exportação de vídeo com legendas suaves (soft).
+- Exportação de vídeo com legendas embutidas (hard).
+- Exportações em lote.
+- Downloads de modelos.
 
-Model downloads and media processing use separate notifications, so a download can continue while subtitle generation or export is also running.
+Downloads de modelos e processamento de mídia usam notificações separadas, para que um download possa continuar enquanto a geração de legendas ou a exportação também está rodando.
 
-### Subtitle preview and editing
+### Pré-visualização e edição de legendas
 
-The preview screen lets you inspect and adjust generated subtitles before exporting.
+A tela de pré-visualização permite inspecionar e ajustar as legendas geradas antes de exportar.
 
-Supported editing actions include:
+As ações de edição suportadas incluem:
 
-- Edit subtitle text.
-- Merge cues.
-- Split or adjust cue timing.
-- Delete cues.
-- Preview subtitles during video playback.
-- Use styled captions for short-form videos.
+- Editar o texto da legenda.
+- Mesclar falas.
+- Dividir ou ajustar o tempo da legenda.
+- Excluir falas.
+- Pré-visualizar as legendas durante a reprodução do vídeo.
+- Usar legendas estilizadas para vídeos de formato curto.
 
-### Subtitle file export
+### Exportação de arquivo de legenda
 
-Generated subtitles can be saved as:
+As legendas geradas podem ser salvas como:
 
 - `SRT`
 - `VTT`
 
-The default batch subtitle format can be changed in settings.
+O formato padrão de exportação em lote de legendas pode ser alterado nas configurações.
 
-### Video export
+### Exportação de vídeo
 
-The app can create captioned video files in two main ways:
+O aplicativo pode criar arquivos de vídeo com legendas de duas maneiras principais:
 
-- **Soft subtitles:** subtitles are stored as a separate subtitle stream in the video container when possible, so compatible players can toggle them on or off.
-- **Hard subtitles:** subtitles are burned into the video frames and are always visible.
+- **Legendas suaves (Soft):** as legendas são armazenadas como um fluxo de legenda separado no contêiner do vídeo quando possível, para que os players compatíveis possam ativá-las ou desativá-las.
+- **Legendas embutidas (Hard):** as legendas são gravadas nos quadros do vídeo e ficam sempre visíveis.
 
-Soft subtitle export is useful when you want a non-destructive caption track. Hard subtitle export is useful for platforms or players where captions must always be visible. Both honor the selected subtitle layer (original, translation, or bilingual).
+A exportação de legenda suave é útil quando você deseja uma faixa de legenda não destrutiva. A exportação de legenda embutida é útil para plataformas ou players onde as legendas devem estar sempre visíveis. Ambas respeitam a camada de legenda selecionada (original, tradução ou bilíngue).
 
-### Shorts captions
+### Legendas para Shorts
 
-Short-form caption styling is available for vertical/social videos. The app can use word-level timing to create word-by-word captions and can export styled subtitles into supported video outputs.
+O estilo de legenda para formato curto está disponível para vídeos verticais/para redes sociais. O aplicativo pode usar o tempo em nível de palavra para criar legendas palavra por palavra e pode exportar legendas estilizadas em saídas de vídeo suportadas.
 
-Settings include options for:
+As configurações incluem opções para:
 
-- Default short caption size.
-- Uppercase short captions.
-- Word-by-word mode.
-- Skipping the shorts setup dialog.
+- Tamanho padrão da legenda curta.
+- Legendas curtas em maiúsculas.
+- Modo palavra por palavra.
+- Pular a janela de configuração de shorts.
 
-### Shorts extraction
+### Extração de Shorts
 
-Completed queue items include a **Create Shorts** action. On Android 12 and newer, the optional Gemma 4 E2B model analyzes the saved timestamped transcript entirely on-device and proposes five editable 20–60 second clips. The review screen supports clip selection, subtitle-snapped boundary edits, original/translated/bilingual hard captions, and a per-clip horizontal 9:16 crop. Selected clips export as 1080×1920 MP4 videos and appear in the export library.
+Os itens concluídos na fila incluem a ação **Criar Shorts**. No Android 12 ou superior, o modelo opcional Gemma 4 E2B analisa a transcrição salva com timestamps inteiramente no dispositivo e propõe cinco clipes editáveis de 20 a 60 segundos. A tela de revisão suporta seleção de clipes, ajustes de limites encaixados nas legendas, legendas embutidas originais/traduzidas/bilíngues, e um corte horizontal 9:16 por clipe. Os clipes selecionados são exportados como vídeos MP4 de 1080×1920 e aparecem na biblioteca de exportação.
 
-Phrase montage mode does not require Gemma. Enter a word or phrase and AutoSub joins every timestamped occurrence into one video, either using exact word timing or expanding each match to its complete subtitle cue.
+O modo de montagem de frases não requer o Gemma. Digite uma palavra ou frase e o AutoSub une todas as ocorrências com timestamps em um único vídeo, usando o tempo exato da palavra ou expandindo cada correspondência para a sua fala completa na legenda.
 
-Completed queue items also provide **Talk only**, which joins every subtitle cue into a continuous spoken cut, and **No silence**, which uses the selected WebRTC or Silero VAD settings to remove silent regions. VAD silence removal is also optional when exporting AI-selected Shorts.
+Os itens concluídos na fila também oferecem **Apenas fala**, que une todas as falas das legendas em um corte de fala contínuo, e **Sem silêncio**, que usa as configurações WebRTC ou Silero VAD selecionadas para remover regiões de silêncio. A remoção de silêncio via VAD também é opcional ao exportar Shorts selecionados por IA.
 
-The LiteRT-LM model is approximately 2.6 GB and is managed from the Models screen with resumable downloads. Devices with less than 8 GB RAM receive a warning before loading it. Older Android versions retain all existing subtitle features but do not load the AI runtime.
+O modelo LiteRT-LM tem aproximadamente 2.6 GB e é gerenciado na tela de Modelos com downloads que podem ser retomados. Dispositivos com menos de 8 GB de RAM recebem um aviso antes de carregá-lo. Versões mais antigas do Android mantêm todos os recursos de legenda existentes, mas não carregam o ambiente de execução de IA.
 
-### Model manager
+### Gerenciador de modelos
 
-The app includes a unified manager for Whisper and Vosk speech recognition models.
+O aplicativo inclui um gerenciador unificado para modelos de reconhecimento de fala Whisper e Vosk.
 
-Model features include:
+Os recursos do modelo incluem:
 
-- Bundled English Whisper model support.
-- Downloadable model catalog covering many languages and accuracy tiers.
-- Search and horizontal filter chips.
-- Pause, resume, and cancel for downloads.
-- Queued model downloads.
-- Partial download resume.
-- Compatibility checks for large models.
-- RAM usage display option.
+- Suporte ao modelo Whisper em inglês já incluído.
+- Catálogo de modelos para download cobrindo muitos idiomas e níveis de precisão.
+- Pesquisa e filtros horizontais (chips).
+- Pausar, retomar e cancelar downloads.
+- Fila de downloads de modelos.
+- Retomada de downloads parciais.
+- Verificações de compatibilidade para modelos grandes.
+- Opção de exibição do uso de RAM.
 
-Downloaded models are not auto-loaded after download completion while another generation or export task is active. This prevents active media processing from being interrupted by a model switch.
+Os modelos baixados não são carregados automaticamente após a conclusão do download enquanto outra tarefa de geração ou exportação estiver ativa. Isso evita que o processamento de mídia ativo seja interrompido por uma troca de modelo.
 
-### Export library
+### Biblioteca de exportação
 
-Completed exports are saved into the export library so they are easy to find later.
+As exportações concluídas são salvas na biblioteca de exportação para que sejam fáceis de encontrar depois.
 
-The export library supports:
+A biblioteca de exportação suporta:
 
-- Subtitle and video export records.
-- Search and filtering.
-- Grid/list viewing.
-- Opening exported files.
-- Sharing exported files.
-- Moving files.
-- Deleting records.
-- Multi-select actions.
-- Select all for visible export items.
+- Registros de exportação de legendas e vídeos.
+- Pesquisa e filtragem.
+- Visualização em grade/lista.
+- Abertura de arquivos exportados.
+- Compartilhamento de arquivos exportados.
+- Movimentação de arquivos.
+- Exclusão de registros.
+- Ações de seleção múltipla.
+- Selecionar tudo para os itens de exportação visíveis.
 
-### Settings
+### Configurações
 
-Current settings include:
+As configurações atuais incluem:
 
-- Recognition language / auto-detect (Whisper).
-- Subtitle translation, with source and target languages.
-- Voice Activity Detection model and sensitivity.
-- Maximum words per subtitle.
-- Keep sentences together.
-- Suppress non-speech (SDH) captions.
-- Batch subtitle export format.
-- Export location preference.
-- Short caption text size.
-- Uppercase short captions.
-- Word-by-word short captions.
-- Skip shorts setup dialog.
-- Completion notifications.
-- RAM usage display.
+- Idioma de reconhecimento / detecção automática (Whisper).
+- Tradução de legendas, com idiomas de origem e destino.
+- Modelo e sensibilidade da Detecção de Atividade de Voz.
+- Máximo de palavras por legenda.
+- Manter frases juntas.
+- Suprimir legendas não-faladas (SDH).
+- Formato de exportação em lote de legendas.
+- Preferência de local de exportação.
+- Tamanho do texto da legenda curta.
+- Legendas curtas em maiúsculas.
+- Legendas curtas palavra por palavra.
+- Pular janela de configuração de shorts.
+- Notificações de conclusão.
+- Exibição do uso de RAM.
 
-## How it works
+## Como funciona
 
-1. Pick a video or add videos to the queue.
-2. Choose the speech model (Whisper or Vosk) you want to use.
-3. Optionally set the language, translation, and silence-skipping options.
-4. Generate subtitles locally on the device.
-5. Preview and edit the generated subtitles.
-6. Export subtitles as a file or render a captioned video.
+1. Escolha um vídeo ou adicione vídeos à fila.
+2. Escolha o modelo de fala (Whisper ou Vosk) que deseja usar.
+3. Opcionalmente, defina o idioma, a tradução e as opções de salto de silêncio.
+4. Gere legendas localmente no dispositivo.
+5. Pré-visualize e edite as legendas geradas.
+6. Exporte as legendas como um arquivo ou renderize um vídeo com legendas.
 
-For long-running operations, the foreground service keeps the active task connected to Android's notification system. The UI binds back to that service when the app is reopened, so progress and active task state can be shown again without restarting the task.
+Para operações de longa duração, o serviço em primeiro plano mantém a tarefa ativa conectada ao sistema de notificações do Android. A interface se reconecta a esse serviço quando o aplicativo é reaberto, para que o progresso e o estado da tarefa ativa possam ser mostrados novamente sem reiniciar a tarefa.
 
-## Permissions
+## Permissões
 
-The app uses Android foreground service and wake lock permissions for long-running work:
+O aplicativo usa permissões de serviço em primeiro plano e wake lock do Android para trabalhos de longa duração:
 
 - `FOREGROUND_SERVICE`
 - `FOREGROUND_SERVICE_MEDIA_PROCESSING`
 - `FOREGROUND_SERVICE_DATA_SYNC`
 - `WAKE_LOCK`
 
-Media processing work uses the media processing foreground service type. Model downloads use the data sync foreground service type. The wake lock keeps the CPU active during long transcriptions and exports.
+O trabalho de processamento de mídia usa o tipo de serviço em primeiro plano de processamento de mídia. Os downloads de modelos usam o tipo de serviço em primeiro plano de sincronização de dados. O wake lock mantém a CPU ativa durante transcrições e exportações longas.
 
-On Android 13 and newer, notification permission affects optional completion/progress notifications. Required foreground service notifications are still part of the active foreground service path.
+No Android 13 ou superior, a permissão de notificação afeta notificações opcionais de conclusão/progresso. As notificações obrigatórias do serviço em primeiro plano ainda fazem parte do caminho ativo do serviço em primeiro plano.
 
-## Tech stack
+## Tecnologias utilizadas
 
-- Android app written in Java.
-- [whisper.cpp](https://github.com/ggerganov/whisper.cpp) for offline Whisper speech recognition with word-level timing.
-- [Vosk Android](https://github.com/alphacep/vosk-api) for offline Kaldi-based speech recognition.
-- [android-vad](https://github.com/gkonovalov/android-vad) (WebRTC and Silero) for voice activity detection.
-- [ML Kit Translation](https://developers.google.com/ml-kit/language/translation) for on-device subtitle translation.
-- [FFmpeg Kit](https://github.com/arthenica/ffmpeg-kit/tree/main/android) for audio extraction and video/subtitle export.
-- [AndroidX Media3](https://developer.android.com/jetpack/androidx/releases/media3) for video playback.
-- [LiteRT-LM](https://developers.google.com/edge/litert-lm/android) for running AI Shorts Editor which is basically Gemma42B model
-- [ML Face Detection](https://developers.google.com/ml-kit/vision/face-detection/android) for automatically tracking and framing talking faces on generated shorts
-- Android foreground services for long-running generation, export, and download work.
-- Material Components for Android UI.
+- Aplicativo Android escrito em Java.
+- [whisper.cpp](https://github.com/ggerganov/whisper.cpp) para reconhecimento de fala Whisper offline com tempo em nível de palavra.
+- [Vosk Android](https://github.com/alphacep/vosk-api) para reconhecimento de fala offline baseado em Kaldi.
+- [android-vad](https://github.com/gkonovalov/android-vad) (WebRTC e Silero) para detecção de atividade de voz.
+- [ML Kit Translation](https://developers.google.com/ml-kit/language/translation) para tradução de legendas no dispositivo.
+- [FFmpeg Kit](https://github.com/arthenica/ffmpeg-kit/tree/main/android) para extração de áudio e exportação de vídeo/legenda.
+- [AndroidX Media3](https://developer.android.com/jetpack/androidx/releases/media3) para reprodução de vídeo.
+- [LiteRT-LM](https://developers.google.com/edge/litert-lm/android) para rodar o AI Shorts Editor, que é basicamente o modelo Gemma42B
+- [ML Face Detection](https://developers.google.com/ml-kit/vision/face-detection/android) para rastrear e enquadrar automaticamente rostos falantes nos shorts gerados
+- Serviços em primeiro plano do Android para geração, exportação e download de longa duração.
+- Material Components para a interface do Android.
 
-## Build from source
+## Compilar a partir do código-fonte
 
-Clone the project and open it in Android Studio, or build from the command line:
+Clone o projeto e abra no Android Studio, ou compile pela linha de comando:
 
 ```powershell
 .\gradlew.bat :app:assembleDebug
-```
-
-The app module uses:
-
-- Minimum SDK: 24
-- Target SDK: 36
-
-## Notes
-
-- Recognition quality depends heavily on the selected model and source audio.
-- Larger models can improve recognition but require more storage, memory, and processing time.
-- Voice Activity Detection trades accuracy for speed; leave it off when timing precision matters most.
-- Full guaranteed resume after Android kills the whole app process during an active FFmpeg export is not currently promised.
-- Pending/completed queue state and partial model downloads are recoverable on the next launch.
-
-## Used projects
-
-- [whisper.cpp](https://github.com/ggerganov/whisper.cpp)
-- [Vosk Speech Recognizer](https://github.com/alphacep/vosk-api)
-- [android-vad](https://github.com/gkonovalov/android-vad)
-- [ML Kit Translation](https://developers.google.com/ml-kit/language/translation)
-- [FFmpeg Kit](https://github.com/arthenica/ffmpeg-kit/tree/main/android)
-- [LiteRT-LM](https://developers.google.com/edge/litert-lm/android)
-- [ML Face Detection](https://developers.google.com/ml-kit/vision/face-detection/android)
-- [AndroidX Media3](https://developer.android.com/jetpack/androidx/releases/media3)
-- [Material Components for Android](https://github.com/material-components/material-components-android)
-</content>
-</invoke>
