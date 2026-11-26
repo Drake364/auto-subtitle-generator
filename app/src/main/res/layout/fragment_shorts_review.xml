@@ -36,7 +36,7 @@
             android:id="@+id/currentCandidateTitleTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Select a candidate"
+            android:text="Selecione um clipe"
             android:textSize="17sp"
             android:textStyle="bold" />
 
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:text="Horizontal framing"
+            android:text="Enquadramento horizontal"
             android:textStyle="bold" />
 
         <com.google.android.material.slider.Slider
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:alpha="0.7"
             android:gravity="center"
-            android:text="Centered"
+            android:text="Centralizado"
             android:textSize="12sp" />
 
         <com.google.android.material.button.MaterialButton
@@ -79,21 +79,21 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
-            android:text="Auto frame speaker" />
+            android:text="Enquadrar locutor auto." />
 
         <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/removeSilenceSwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Remove silence with VAD (captions off)" />
+            android:text="Remover silêncio com VAD (legendas desativadas)" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/exportSelectedBT"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
-            android:text="Export selected"
+            android:text="Exportar selecionados"
             app:icon="@drawable/ri_export_line" />
     </LinearLayout>
 
