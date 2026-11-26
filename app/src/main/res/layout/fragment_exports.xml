@@ -19,7 +19,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Search exports"
+            android:hint="Pesquisar exportações"
             app:startIconDrawable="@drawable/ri_search_line">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -35,7 +35,7 @@
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginStart="10dp"
-            android:contentDescription="Create folder"
+            android:contentDescription="Criar pasta"
             app:icon="@drawable/ri_folder_add_line"
             app:iconGravity="start"
             app:iconPadding="0dp" />
@@ -61,28 +61,28 @@
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="All" />
+                android:text="Todos" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/filterExportsVideosChip"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Videos" />
+                android:text="Vídeos" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/filterExportsSubtitlesChip"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Subtitles" />
+                android:text="Legendas" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/filterExportsFoldersChip"
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Folders" />
+                android:text="Pastas" />
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
 
@@ -98,8 +98,8 @@
             style="@style/Widget.Material3.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:contentDescription="Go up"
-            android:text="Up"
+            android:contentDescription="Voltar um nível"
+            android:text="Voltar"
             android:visibility="gone"
             app:icon="@drawable/ri_folder_open_line"
             app:iconGravity="textStart"
@@ -137,7 +137,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
-            android:contentDescription="Switch layout view"
+            android:contentDescription="Alternar visualização da lista"
             app:icon="@drawable/ri_grid_line" />
     </LinearLayout>
 
@@ -148,7 +148,7 @@
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:alpha="0.72"
-        android:text="No exports yet"
+        android:text="Nenhuma exportação ainda"
         android:textSize="16sp"
         android:visibility="gone" />
 
