@@ -19,7 +19,7 @@
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Resolution">
+        android:hint="Resolução">
         <AutoCompleteTextView
             android:id="@+id/resolutionDropdown"
             android:layout_width="match_parent"
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:hint="Frame rate">
+        android:hint="Taxa de quadros">
         <AutoCompleteTextView
             android:id="@+id/fpsDropdown"
             android:layout_width="match_parent"
@@ -45,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:hint="Quality">
+        android:hint="Qualidade">
         <AutoCompleteTextView
             android:id="@+id/qualityDropdown"
             android:layout_width="match_parent"
